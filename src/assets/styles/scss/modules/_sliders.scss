@@ -1,0 +1,184 @@
+
+//listing page hero banner slider
+.listing-page-herobanner-slider .slick-prev,
+.listing-page-herobanner-slider .slick-next{
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+}
+
+.listing-page-herobanner-slider .slick-prev{
+    left: 5%;
+    
+}
+
+.listing-page-herobanner-slider .slick-next{
+    right: 5%;
+}
+
+.listing-page-herobanner-slider .slider-item{
+    position:relative;
+    img{
+        border-radius: 10px;
+    }
+    .slider-item-content{
+        color: $color-green;
+        position: absolute;
+        top: 70%;
+        left: 7%;
+        h1{
+            font-weight: 700;
+        }
+        .slider-item-genre-list{
+            li{
+                display: inline-block;
+            }
+            li+li::before{
+                padding: 8px;
+                color: #6d738d;
+                content: "|\00a0";
+            }
+        }
+    }
+}
+//end of listing page hero banner slider
+
+
+//Start of recommended-content-slide1
+#recommended-content-slide1{
+    padding: 20px 20px;
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .recommended-content-list{
+        .slick-next, .slick-prev{
+            position: absolute;
+            top: 40%;
+            z-index: 1000;
+        }
+        .slick-prev{
+            left: 1%;
+        }
+        .slick-next{
+            right:1%
+        }
+        .content-slide-item{
+            .card{
+                border:none;
+                margin: 0px 5px;
+                font-weight: 900;
+                img{
+                    border-radius: 10px;
+                }
+
+                .card-body{
+                    
+                    text-align: left;
+                    padding: 0 0;
+                    line-height: .2rem;
+                    h5.content-title{
+                        font-weight: 900;
+                        font-size: 16px;
+                    }
+                    p.content-text{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}
+//end of recommended-content-slide1
+
+//Start of recommended-content-slide2
+#recommended-content-slide2{
+    padding: 20px 20px;
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .recommended-content-list{
+        .slick-next, .slick-prev{
+            position: absolute;
+            top: 40%;
+            z-index: 1000;
+        }
+        .slick-prev{
+            left: 1%;
+        }
+        .slick-next{
+            right:1%
+        }
+        .content-slide-item{
+            .card{
+                border:none;
+                margin: 0px 5px;
+                font-weight: 900;
+                img{
+                    border-radius: 10px;
+                }
+
+                .card-body{
+                    
+                    text-align: left;
+                    padding: 0 0;
+                    line-height: .2rem;
+                    h5.content-title{
+                        font-weight: 900;
+                        font-size: 16px;
+                    }
+                    p.content-text{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}
+//End of recommended-content-slide2
+
+#recommended-content-slide3{
+    padding: 20px 20px;
+    h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .recommended-content-list{
+        .slick-next, .slick-prev{
+            position: absolute;
+            top: 40%;
+            z-index: 1000;
+        }
+        .slick-prev{
+            left: 1%;
+        }
+        .slick-next{
+            right:1%
+        }
+        .content-slide-item{
+            .card{
+                border:none;
+                margin: 0px 5px;
+                font-weight: 900;
+                img{
+                    border-radius: 10px;
+                }
+
+                .card-body{
+                    
+                    text-align: left;
+                    padding: 0 0;
+                    line-height: .2rem;
+                    h5.content-title{
+                        font-weight: 900;
+                        font-size: 16px;
+                    }
+                    p.content-text{
+                        font-size:14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+footer{
+    border-top: 3px solid $color-green;
+    background-color: lightgrey;
+    font-weight: 900;
+    padding: 0px 20px;
+    .footer-top{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-grow: 1;
+        padding: 20px 0px;
+        .footer-left{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex-grow: 1;
+           .footer-left-item{
+               margin: 0px 5px;
+           }
+        }
+        .footer-right{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-grow: 2;
+            .footer-right-item{
+                margin: 0px 10px;
+                .social-media-icons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    font-size: 24px;
+                }
+
+                .available-on-icons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    font-size: 24px;
+                    
+                }
+            }
+        }
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-top: 1px solid grey;
+        padding: 20px 0px;
+        .footer-bottom-left{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            p.color-green{
+                color: $color-green;
+            }
+        }
+
+        .footer-bottom-right{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: flex-end;
+            .footer-bottom-right-item{
+                text-align: right;
+                line-height: .3;
+                h4.color-blue{
+                    font-weight: 900;
+                    color: blue;
+                }
+            }
+        }
+    }
+}

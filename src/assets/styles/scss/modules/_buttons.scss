@@ -1,0 +1,24 @@
+//header Login Button
+.login-btn{
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width:80px;
+    text-align: center;
+    color: white;
+    background-color: $color-green;
+}
+
+//listing-page herobanner play button
+.playbtn {
+    margin-top: 2%;
+    text-align: center;
+    display: inline-block;
+    background: rgba(0,0,0,.4);
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 20px;
+    width:80px;
+    border: 1px solid #fff;
+    color: $color-green;
+}
