@@ -1,6 +1,6 @@
 import React from "react";
 import ContentSlider from "../components/ContentSlider";
-import HeroSlider from "../components/HeroSlider";
+import HeroSlider from "../components/banners/HeroSlider";
 import Base from "./Base";
 import img16_9 from "./../assets/images/upskillfun-16-9-banner-account-based-marketing.jpg";
 import img4_5 from "./../assets/images/upskillfun-4-5-banner-account-based-marketing.jpg";

@@ -1,14 +1,12 @@
 header #Main-nav{
     .container-fluid{
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         flex-grow: 1;
         padding: 0px 35px;
         .nav-left{
             display: flex;
-            flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             flex-grow: 1;

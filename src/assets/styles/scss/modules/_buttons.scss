@@ -22,3 +22,54 @@
     border: 1px solid #fff;
     color: $color-green;
 }
+
+//Content button
+.content-btn{
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-green;
+    color: white;
+    text-align: center;
+    transition: border .5s, background-color .5s;
+
+    &:hover{
+        border: 1px solid white;
+        background-color: $color-blue;
+    }
+}
+
+//sample content button
+.sample-content-btn{
+    width: 140px;
+    height: 40px;
+    border: 1px solid $color-green;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    transition: border .5s, background-color .5s;
+
+    &:hover{
+        border: 1px solid white;
+        background-color: $color-green;
+    }
+}
+
+//Content Buy Button
+.contentb-buy-btn{
+    width: 295px;
+    height: 45px;
+    border: 1px solid $color-green;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    transition: border .5s, background-color .5s;
+
+    &:hover{
+        border: 1px solid white;
+        background-color: $color-green;
+    }
+}

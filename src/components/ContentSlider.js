@@ -1,8 +1,22 @@
 import React from "react";
 import Slider from "react-slick";
 import Card from "./cards/Card";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const ContentSlider = ({id,img,sliderClassName,title}) =>{
+
+    const newNextArrow = (props)=>{
+      const { className,onClick} = props;
+      return(
+        <div
+        className={className}
+        onClick={onClick}
+        >
+        <FontAwesomeIcon icon={faChevronLeft} color="#000" size="2x"/>
+        </div>
+      )
+    }
 
     var settings = {
       dots: false,
@@ -11,6 +25,7 @@ const ContentSlider = ({id,img,sliderClassName,title}) =>{
       slidesToShow: 6,
       slidesToScroll: 2,
       initialSlide: 0,
+      nextArrow: <newNextArrow />,
       className:"recommended-content-list",
       responsive: [
         {

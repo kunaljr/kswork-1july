@@ -2,11 +2,11 @@ import React from "react";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import HeroSlideItem from "./cards/HeroSlideItem";
+import HeroSlideItem from "../cards/HeroSlideItem";
 const HeroSlider = ({id,img,classToChangeSize}) =>{
 
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow:1,

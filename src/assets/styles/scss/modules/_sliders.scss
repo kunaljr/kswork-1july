@@ -1,43 +1,106 @@
 
 //listing page hero banner slider
-.listing-page-herobanner-slider .slick-prev,
-.listing-page-herobanner-slider .slick-next{
-    position: absolute;
-    top: 50%;
-    z-index: 1000;
-}
-
-.listing-page-herobanner-slider .slick-prev{
-    left: 5%;
-    
-}
-
-.listing-page-herobanner-slider .slick-next{
-    right: 5%;
-}
-
-.listing-page-herobanner-slider .slider-item{
-    position:relative;
-    img{
-        border-radius: 10px;
-    }
-    .slider-item-content{
-        color: $color-green;
+.listing-page-herobanner-slider{
+    .slick-prev,
+    .slick-next{
         position: absolute;
-        top: 70%;
-        left: 7%;
-        h1{
-            font-weight: 700;
+        top: 50%;
+        z-index: 1000;
+    }
+    .slick-prev{
+            left: 5%;
+            font-size: 15px !important;
+            &::before{
+                font-family:"Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f053' !important; 
+                font-size: 2rem;
+            }
         }
-        .slider-item-genre-list{
-            li{
-                display: inline-block;
+    .slick-next{
+            right:5%;
+            font-size: 15px !important;
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f054' !important;
+                font-size: 2rem;
             }
-            li+li::before{
-                padding: 8px;
-                color: #6d738d;
-                content: "|\00a0";
+    }
+
+    .slider-item{
+        position:relative;
+        img{
+            border-radius: 10px;
+        }
+        .slider-item-content{
+            display: none;
+            color: $color-green;
+            position: absolute;
+            top: 70%;
+            left: 7%;
+            animation: myfirst 3s 1;
+            h1{
+                font-weight: 700;
             }
+            .slider-item-genre-list{
+                li{
+                    display: inline-block;
+                }
+                li+li::before{
+                    padding: 8px;
+                    color: #6d738d;
+                    content: "|\00a0";
+                }
+            }
+        }
+    }
+
+    .slick-active{
+            .slider-item-content{
+            display: block;
+            color: $color-green;
+            position: absolute;
+            top: 70%;
+            left: 7%;
+            animation: myfirst 3s 1;
+            h1{
+                font-weight: 700;
+                font-size: 2rem;
+            }
+            .slider-item-genre-list{
+                li{
+                    display: inline-block;
+                }
+                li+li::before{
+                    padding: 8px;
+                    color: #6d738d;
+                    content: "|\00a0";
+                }
+            }
+        }
+        
+        @keyframes myfirst {
+            0%{left: 0px; top: 70%;opacity: .6;}
+            100% {left: 7%; top: 70%;opacity: 1;}
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 10%;
+        li button{
+            border-radius: 2rem;
+            &::before{
+                content:"-";
+                font-size: 3rem;
+                color: white;
+            }
+        }
+
+        li.slick-active button::before{
+            font-size: 3.5rem;
+            color: white;
         }
     }
 }
@@ -52,6 +115,7 @@
         font-weight: 700;
     }
     .recommended-content-list{
+        
         .slick-next, .slick-prev{
             position: absolute;
             top: 40%;
@@ -59,17 +123,53 @@
         }
         .slick-prev{
             left: 1%;
+            font-size: 15px !important;
+            &::before{
+                font-family:"Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f053' !important; 
+                font-size: 1.5rem;
+            }
         }
         .slick-next{
-            right:1%
+            right:1%;
+            font-size: 15px !important;
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f054' !important;
+                font-size: 1.5rem;
+            }
         }
+
         .content-slide-item{
+            margin-top: 10px;
             .card{
                 border:none;
+                border-radius: 10px;
                 margin: 0px 5px;
                 font-weight: 900;
-                img{
-                    border-radius: 10px;
+                transition: transform .4s ;
+                .img{
+                    position: relative;
+                    img{
+                        border-radius: 10px;
+                    }
+                    .icon{
+                            position: absolute;
+                            top: 45%;
+                            left: 45%;
+                            color: $color-green;
+                            font-size: 1em;
+                            visibility: hidden;
+                            transition: visibility .5s, font-size .5s;
+                    }
+                    &:hover{
+                        .icon{
+                            visibility: visible;
+                            font-size: 2em;
+                        }
+                    }
                 }
 
                 .card-body{
@@ -85,7 +185,42 @@
                         font-size:14px;
                     }
                 }
+
+                &:hover{
+                    z-index: 100;
+                    transform:scale(1.1,1.1)
+                }
             }
+        }
+    
+    }
+
+    .slick-slide:first-child{
+            z-index: 1000;
+            transition: transform .4s;
+            transform-origin: 0% 50% !important;
+            .card:hover{
+                z-index: 1000;
+                transform: scale(1,1);
+            }
+            &:hover{
+                z-index: 1000;
+                transform: scale(1.1,1.1) !important;
+            }
+        
+    }
+
+    .slick-slide:nth-child(6){
+        z-index: 10000;
+        transition: transform .4s;
+        transform-origin: 100% 50% !important;
+        .card:hover{
+            z-index: 1000;
+            transform: scale(1,1);
+        }
+        &:hover{
+            z-index: 1000;
+            transform: scale(1.1,1.1) !important;
         }
     }
 }
@@ -104,19 +239,56 @@
             top: 40%;
             z-index: 1000;
         }
+
         .slick-prev{
             left: 1%;
+            font-size: 15px !important;
+            &::before{
+                font-family:"Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f053' !important; 
+                font-size: 1.5rem;
+            }
         }
         .slick-next{
-            right:1%
+            right:1%;
+            font-size: 15px !important;
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f054' !important;
+                font-size: 1.5rem;
+            }
         }
+
         .content-slide-item{
+            margin: 20px 0px 3px 0px;
             .card{
                 border:none;
+                border-radius: 10px;
                 margin: 0px 5px;
                 font-weight: 900;
-                img{
-                    border-radius: 10px;
+                transition: transform .4s;
+                .img{
+                    position: relative;
+                    img{
+                        border-radius: 10px;
+                    }
+                    .icon{
+                            position: absolute;
+                            top: 45%;
+                            left: 45%;
+                            color: $color-green;
+                            font-size: 1em;
+                            visibility: hidden;
+                            transition: visibility .5s, font-size .5s;
+                    }
+                    &:hover{
+                        .icon{
+                            visibility: visible;
+                            font-size: 2em;
+                        }
+                    }
                 }
 
                 .card-body{
@@ -132,7 +304,41 @@
                         font-size:14px;
                     }
                 }
+
+                &:hover{
+                    z-index: 1000;
+                    transform: scale(1.1,1.1);
+                }
             }
+        }
+    }
+
+    .slick-slide:first-child{
+            z-index: 1000;
+            transition: transform .4s;
+            transform-origin: 0% 50% !important;
+            .card:hover{
+                z-index: 100;
+                transform: scale(1,1);
+            }
+            &:hover{
+                z-index: 1000;
+                transform: scale(1.1,1.1) !important;
+            }
+        
+    }
+
+    .slick-slide:nth-child(6){
+        z-index: 10000;
+        transition: transform .4s;
+        transform-origin: 100% 50% !important;
+        .card:hover{
+            z-index: 1000;
+            transform: scale(1,1);
+        }
+        &:hover{
+            z-index: 1000;
+            transform: scale(1.1,1.1) !important;
         }
     }
 }
@@ -152,17 +358,52 @@
         }
         .slick-prev{
             left: 1%;
+            font-size: 15px !important;
+            &::before{
+                font-family:"Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f053' !important; 
+                font-size: 1.5rem;
+            }
         }
         .slick-next{
-            right:1%
+            right:1%;
+            font-size: 15px !important;
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                content: '\f054' !important;
+                font-size: 1.5rem;
+            }
         }
         .content-slide-item{
+            margin-top: 15px;
             .card{
                 border:none;
+                border-radius: 10px;
                 margin: 0px 5px;
                 font-weight: 900;
-                img{
-                    border-radius: 10px;
+                transition: transform .4s;
+                .img{
+                    position: relative;
+                    img{
+                        border-radius: 10px;
+                    }
+                    .icon{
+                            position: absolute;
+                            top: 45%;
+                            left: 45%;
+                            color: $color-green;
+                            font-size: 1em;
+                            visibility: hidden;
+                            transition: visibility .5s, font-size .5s;
+                    }
+                    &:hover{
+                        .icon{
+                            visibility: visible;
+                            font-size: 2em;
+                        }
+                    }
                 }
 
                 .card-body{
@@ -178,7 +419,41 @@
                         font-size:14px;
                     }
                 }
+
+                &:hover{
+                    z-index: 1000;
+                    transform:scale(1.1,1.1)
+                }
             }
+        }
+    }
+
+    .slick-slide:first-child{
+            z-index: 1000;
+            transition: transform .4s;
+            transform-origin: 0% 50% !important;
+            .card:hover{
+                z-index: 100;
+                transform: scale(1,1);
+            }
+            &:hover{
+                z-index: 1000;
+                transform: scale(1.1,1.1) !important;
+            }
+        
+    }
+
+    .slick-slide:nth-child(6){
+        z-index: 10000;
+        transition: transform .4s;
+        transform-origin: 100% 50% !important;
+        .card:hover{
+            z-index: 1000;
+            transform: scale(1,1);
+        }
+        &:hover{
+            z-index: 1000;
+            transform: scale(1.1,1.1) !important;
         }
     }
 }
