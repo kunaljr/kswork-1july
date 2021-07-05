@@ -1,15 +1,17 @@
-import React from "react";
+import react from "react";
 import Slider from "react-slick";
-import Card from "./cards/Card";
+import Card from "../cards/Card";
+import img from "./../../assets/images/upskillfun-4-3-banner-account-based-marketing.jpg"
 
-const ContentSlider = ({id,img,sliderClassName,title}) =>{
+
+const DetailPage4Slide = ({title}) => {
 
     var settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 6,
-      slidesToScroll: 2,
+      slidesToShow: 4,
+      slidesToScroll: 1,
       initialSlide: 0,
       nextArrow: <newNextArrow />,
       className:"recommended-content-list",
@@ -20,7 +22,7 @@ const ContentSlider = ({id,img,sliderClassName,title}) =>{
             slidesToShow: 3,
             slidesToScroll: 3,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
@@ -41,20 +43,18 @@ const ContentSlider = ({id,img,sliderClassName,title}) =>{
     ]}
 
     var slides=[];
-    for(var i=0; i<=8;i++){
+    for(var i=0; i<=6;i++){
         slides.push(<Card contentImg={img} contentTitle="ABC Course Sample 01" contentText="introduction to ABM"/>)
     }
 
     return(
-        <section id={id}>
-            <div className="container-fluid">
-                <h1>{title}</h1>
-                <Slider {...settings}>
-                    {slides}
-                </Slider>
-            </div>
-        </section>
+        <div>
+          <h3>{title}</h3>        
+        <Slider {...settings}>
+            {slides}
+        </Slider>
+        </div>
     )
 }
 
-export default ContentSlider;
+export default DetailPage4Slide;

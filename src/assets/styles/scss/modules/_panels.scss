@@ -1,0 +1,125 @@
+//start detail page about content panel
+#about-content-panel{
+   display: flex;
+   padding: 20px;
+   .about-content-specialization{
+       width: 75%;
+       padding: 20px;
+       h1{
+           font-size: 1.5rem;
+           font-weight: 900;
+       }
+
+       #specialization-info-more{
+           display: none;
+       }
+
+
+       .skills-youl-gain{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border:1px solid #6d738d;
+                border-radius: 10px;
+                padding:15px;
+                h6{
+                    font-size: 14px;
+                    font-weight: 900;
+                }
+                ul{
+                    li{
+                        display: inline;
+                        span{
+                            background-color: #6d738d;
+                            font-size: 12px;
+                            font-weight: normal;
+                            color: white;
+                            
+                        }
+                    }
+
+                    li+li::before{
+                        content: " ";
+                    }
+                }
+            }
+
+
+    
+   }
+
+   .content-benefits-and-team{
+       width: 25%;
+        padding: 30px 20px;
+       .course-details-benefits{
+        ul li {
+            line-height: 1em;
+            .i{
+                border: 2px solid $color-green;
+                border-radius:25px;
+                padding:6px;
+                float: left;  
+                font-size: 2rem;
+            }
+            div {
+                display: inline-block;
+                padding-left: 10px;   
+                
+                h2{
+                    font-size:1.1rem;
+                    display: inline;  
+                    font-weight: 700; 
+                }
+                p{
+                    font-size:.7rem;    
+                }
+            }
+            }   
+        }
+
+        .team-behind-course{
+            margin-top: 5%;
+            h5{
+                font-weight: 900;
+            }
+            ul {
+                border-top: 1px solid #6d738d;
+                border-bottom:  1px solid #6d738d;
+                padding-top: 20px;
+                height: auto;
+                li {
+                    text-align: center;
+                    width: 170px;
+                    display: inline-block;
+
+                div{
+                
+                    line-height: .3em;
+                    h6{
+                        margin-top: 5px;
+                        font-size: 15px;
+                        font-weight: 900;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }            
+                }
+            }
+            a{
+                float: right;
+                text-decoration: none;
+                font-size: 14px;
+            }
+        }
+        
+   }
+
+   
+}
+//end detail page about content panel
+
+//start content list panel
+#content-list-panel{
+    display: block;
+}
+//end content list panel

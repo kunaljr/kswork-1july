@@ -1,0 +1,25 @@
+//start detail page second nav
+.detail-page-second-nav{
+    border-bottom: 1px solid grey;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    ul{
+        li{
+            a{
+                color: $color-grey;
+                font-weight: 900;
+                &:hover{
+                    color: $color-green;
+                    border-bottom: 1px solid $color-green;
+                }
+                &:active{
+                    color: $color-green;
+                    border-bottom: 1px solid $color-green;
+                }
+            }
+        }
+    }
+}
+//end detail page second nav
